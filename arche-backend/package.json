@@ -1,0 +1,37 @@
+{
+  "name": "backend",
+  "version": "2.0.0",
+  "description": "Backend for Secure Multi-Modal RAG (FAISS + provider APIs + retrieval-level access control)",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "seed:users": "node src/seed/seedUsers.js",
+    "import:users": "node src/seed/importUsersCsv.js",
+    "seed:sample": "node src/seed/seedSampleData.js",
+    "check:db": "node src/seed/checkDb.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@tesseract.js-data/eng": "^1.0.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "csv-parse": "^7.0.3",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "express-rate-limit": "^8.7.1",
+    "faiss-node": "^0.5.1",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.0",
+    "multer": "^2.4.0",
+    "pdfjs-dist": "^6.4.299",
+    "tesseract.js": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

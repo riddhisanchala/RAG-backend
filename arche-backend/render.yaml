@@ -1,0 +1,37 @@
+# Optional Render Blueprint. You can ignore this file and create the service manually
+# (see README). Using it: Render Dashboard → New → Blueprint → pick this repo.
+services:
+  - type: web
+    name: arche-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATA_DIR
+        value: ./data
+      - key: MAX_UPLOAD_MB
+        value: "25"
+      - key: JWT_EXPIRES_IN
+        value: 12h
+      - key: SEED_DEFAULT_USERS
+        value: "true"
+      - key: RETRIEVAL_TOP_K
+        value: "6"
+      - key: RETRIEVAL_MIN_SCORE
+        value: "0.12"
+      # Secrets / per-deployment values — Render prompts you to fill these in the dashboard:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: ENCRYPTION_KEY
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false

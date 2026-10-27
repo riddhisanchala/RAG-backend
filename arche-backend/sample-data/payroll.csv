@@ -1,0 +1,4 @@
+employee_username,employee_name,base_salary_inr_per_year,bonus_inr,pay_grade,bank_last4
+employee01,Eric Employee,1200000,100000,G5,4821
+hr01,Harry HR,1800000,200000,G7,1175
+jdoe,John Doe,1000000,50000,G4,7712

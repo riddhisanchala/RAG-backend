@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+npm-debug.log*
+
+# runtime data: uploaded files, FAISS indexes, OCR cache
+data/*
+!data/.gitkeep
